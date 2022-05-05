@@ -327,7 +327,7 @@ hclus_eval <- function(data_m, dist_m = 'euclidean', clus_m = 'ward', plot_op = 
     if (is.na(print_num)) {
        for (i in 1:5) {print_len[i] <- length(output_list[[i]])}
     }
-    plot(output_list[[3]][1:print_len[3]], type = 'l', col = 'red', ylim = c(0, ylim_n), lwd=3, ylab = "")
+    plot(output_list[[3]][1:print_len[3]], type = 'l', col = 'red', ylim = c(0, ylim_n), lwd=3, ylab = "",xlab="Clusters")
     lines(output_list[[2]][1:print_len[2]], col = 'blue', lwd=3)
     lines(output_list[[4]][1:print_len[4]], col = 'green', lwd=3)
     #lines(output_list[[5]][1:print_len[5]], col = 'black', lwd=3)
@@ -335,7 +335,7 @@ hclus_eval <- function(data_m, dist_m = 'euclidean', clus_m = 'ward', plot_op = 
       col = c('red', 'blue', 'green'))
     #Plot CD
    
-    plot(output_list[[5]][1:print_len[5]], type = 'l', col = 'black', lwd=3, ylab = "")
+    plot(output_list[[5]][1:print_len[5]], type = 'l', col = 'black', lwd=3, ylab = "",xlab="Clusters")
     legend('topright', c('CD'), lty = c(1), col = c('black'))
   
   }
